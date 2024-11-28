@@ -44,16 +44,11 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
-## Running end-to-end tests
+#Click na pokeball para inicializar o sistema 
+Aqui está a tela inicial:
 
-For end-to-end (e2e) testing, run:
+![Tela inicial](Aqui está a tela inicial:
 
-```bash
-ng e2e
-```
+![Tela inicial](./assets/screenshots/screenshot-home.png))
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
