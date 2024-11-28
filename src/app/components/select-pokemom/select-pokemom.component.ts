@@ -12,8 +12,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class SelectPokemomComponent implements OnInit {
 
-
-
   @Input('pokemonsList')
   pokemons : PokemonDetails[] = [];
   searchQuery: string = '';

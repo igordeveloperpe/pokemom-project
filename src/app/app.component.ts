@@ -10,7 +10,7 @@ import { ListPokemomComponent } from './components/list-pokemom/list-pokemom.com
 @Component({
   selector: 'app-root',
   imports: [ NgClass, PokeballComponent, ListPokemomComponent],
-  providers: [HttpClientModule],
+  providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
