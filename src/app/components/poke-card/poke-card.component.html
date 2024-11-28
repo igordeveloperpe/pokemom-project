@@ -1,0 +1,66 @@
+
+
+  <section
+   class="card-pokemom"
+   *ngIf="selectedPokemon$ | async as selectedPokemon"
+  >
+   <div
+    class="up"
+    [ngStyle]="{'background-color': selectedPokemon.color ==='yellow' || selectedPokemon.color === 'white' ? '#FFCB05': selectedPokemon.color}"
+   >
+
+   <header
+     class="card-header"
+   >
+
+   <div class="conainer-name">
+     <h2 class="name-pokemom">{{selectedPokemon.name}}</h2>
+     <span class="number-pokemom">#{{selectedPokemon.number}}</span>
+   </div>
+
+   <div class="power">
+      <p>{{selectedPokemon.types.join(', ')}}</p>
+   </div>
+   </header>
+
+   <figure class="img-pokemom">
+      @if(selectedPokemon.svg) {
+        <img [src]="selectedPokemon.svg" alt="Pokémon">
+      }@else {
+        <img [src]="selectedPokemon.image" alt="Pokémon">
+
+      }
+  </figure>
+
+   </div>
+
+
+   <div
+    class="low"
+   >
+   <div class="stats-container">
+    <div class="stats">
+      <h3>Status</h3>
+      <ul>
+        <li>HP: {{ selectedPokemon.stats.hp }}</li>
+        <li>Attack: {{ selectedPokemon.stats.attack }}</li>
+        <li>Defesa: {{selectedPokemon.stats.defense}} </li>
+        <li>Speed: {{selectedPokemon.stats.speed}}</li>
+      </ul>
+    </div>
+    <div class="abilities">
+      <h3>Skills</h3>
+      <ul>
+        <li>{{ selectedPokemon.abilities.join(', ') }}</li>
+      </ul>
+    </div>
+  </div>
+
+   </div>
+
+  </section>
+
+
+
+
+

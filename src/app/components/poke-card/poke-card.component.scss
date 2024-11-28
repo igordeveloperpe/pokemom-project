@@ -1,0 +1,155 @@
+
+
+.card-pokemom {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  .up {
+    width: 100%;
+    height: 50%;
+    // background-color: #F5948C;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: center;
+     .card-header {
+      margin-top: 30px;
+
+       width: 80%;
+       height: 30px;
+      display: flex;
+      flex-direction: column;
+
+      justify-content: space-between;
+      align-items: start;
+
+      .conainer-name {
+         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+         margin: 0;
+         color: #fff;
+        }
+
+        .number-pokemom   {
+
+          color: #fff;
+        }
+
+      }
+
+      .power {
+
+        background-color: #fff;
+        opacity: 0.8;
+        color: #7B5F00;
+        font-size: 14px;
+        padding:1px 5px;
+        border-radius: 20px;
+        border: none;
+        text-align: center;
+        display: inline-block;
+
+        margin-top: 10px;
+        p {
+          margin: 2px;
+          font-size: 0.7rem;
+        }
+      }
+
+    }
+
+    .img-pokemom {
+      //  border: 1px solid #FFF;
+      img {
+        position: relative;
+        max-width: 200px;
+        height: 180px;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+
+      }
+
+    }
+
+  }
+}
+
+//low
+
+.stats-container {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f9f9f9; /* Cor de fundo clara */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destacar */
+  max-width: 600px;
+  // margin: 20px auto;
+}
+
+.stats, .abilities {
+  flex: 1;
+  margin: 0 10px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Cor do título */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 16px;
+  color: #555; /* Cor do texto */
+  border-bottom: 1px solid #ddd; /* Linha divisória */
+  padding: 5px 0;
+}
+
+li:last-child {
+  border-bottom: none; /* Remove a linha do último item */
+}
+
+
+@media (max-width: 1000px) {
+.card-pokemom{
+
+  width: 311px;
+  height: 600px;
+
+  .up  {
+    .img-pokemom {
+
+      img {
+        position: relative;
+        width: 150px;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+
+  }
+
+}
+
+}
+
+}
