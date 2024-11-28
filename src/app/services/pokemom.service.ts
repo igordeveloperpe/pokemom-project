@@ -23,10 +23,10 @@ export class PokemomService {
         this.http.get<AbilityDetail>(ability.url).subscribe((abilityDetails) => {
           const pokemonWithAbility = abilityDetails.pokemon;
 
-          pokemonWithAbility.forEach((pokeEntry, index) => {
+          pokemonWithAbility.forEach((pokeEntry) => {
             this.http.get<Pokemon>(pokeEntry.pokemon.url).subscribe((pokemonData) => {
               const pokemonDetails: PokemonDetails = {
-                 id: pokemonData.id,
+                id: pokemonData.id,
                 name: pokemonData.name,
                 image: pokemonData.sprites.other['official-artwork']?.front_default ?? '',
                 svg: pokemonData.sprites.other.dream_world?.front_default ?? '',
@@ -45,8 +45,11 @@ export class PokemomService {
               // Buscar a cor do Pokémon pelo endpoint species
               this.http.get<Species>(pokemonData.species.url).subscribe((speciesData) => {
                 pokemonDetails.color = speciesData.color.name;
-                this.pokemonList.push(pokemonDetails);
-                pokemonDetailsSubject.next(this.pokemonList);
+
+                // Evita emitir duplicados
+                const updatedList = [...this.pokemonList, pokemonDetails];
+                this.pokemonList = updatedList;
+                pokemonDetailsSubject.next(updatedList);
               });
             });
           });
@@ -56,7 +59,6 @@ export class PokemomService {
 
     return pokemonDetailsSubject.asObservable();
   }
-
 
 }
 

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, Input, OnInit } from '@angular/core';
-import { PokemonDetails, SelectPokemom } from '../../@types/types';
+import { Component, inject, Input, } from '@angular/core';
+import { PokemonDetails } from '../../@types/types';
 import { SendPokemomService } from '../../services/send-pokemom.service';
 import { FormsModule } from '@angular/forms';
 
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './select-pokemom.component.html',
   styleUrl: './select-pokemom.component.scss'
 })
-export class SelectPokemomComponent implements OnInit {
+export class SelectPokemomComponent {
 
   @Input('pokemonsList')
   pokemons : PokemonDetails[] = [];
@@ -19,10 +19,6 @@ export class SelectPokemomComponent implements OnInit {
   selectedPokemonId: number | null = null;
 
   sendPokemomService = inject(SendPokemomService);
-
-  ngOnInit(): void {
-
-  }
 
   get filteredPokemons(): PokemonDetails[] {
     if (!this.pokemons) return []; // Retorna uma lista vazia se `pokemons` for `undefined`

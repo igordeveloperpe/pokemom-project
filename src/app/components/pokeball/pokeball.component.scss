@@ -1,7 +1,6 @@
 .container{
   height: 400px;
   width: 400px;
-  // border: 1px solid red;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -16,8 +15,6 @@
   position: relative;
   padding: 0;
   list-style-type: none;
-  // border: 1px solid #fff;
-  // animation: rotate 2s ease;
   animation: bounce 1.5s infinite ease-in-out;
   margin: 0;
   transform-style: preserve-3d;
@@ -28,7 +25,6 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 50%;
-    // border: 1px solid green;
     transform-style: preserve-3d;
     background: linear-gradient(to bottom, red 45%, black 45%, black 55%, white 55%);
     z-index: -1;
@@ -43,51 +39,6 @@
     }
   }
 
-  // &::before {
-  //  position: absolute;
-  //  content: "";
-  // //  height: -30px;
-  // //  width: -30px;
-  //  z-index: 51;
-  //  transform: translateZ(200px) translateY(-50%) translateY(-50%);
-  //  top: 55%;
-  //  left: 45%;
-  //  background-color: #fff;
-  //   border-radius: 40px;
-
-  //   // border: 1px solid red;
-  //  box-shadow:
-  //  0px 0px 1px rgba(0,0,0,1),
-  //  0px 0px 2px rgba(0,0,0,1),
-  //  0px 0px 3px rgba(0,0,0,1),
-  //  0px 0px 4px rgba(0,0,0,1),
-  //  0px 0px 5px rgba(0,0,0,1),
-  //  0px 0px 1px rgba(255,255,255,1),
-  //  0px 0px 2px rgba(255,255,255,1),
-  //  0px 0px 3px rgba(255,255,255,1);
-  // }
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   height: 82px;
-  //   width: 82px;
-  //   z-index: 50;
-  //   transform: translateZ(200px) translateY(-50%) translateY(-50%);
-  //   top: 60%;
-  //   left: 40%;
-  //   background-color: #fff;
-  //    border-radius: 50px;
-
-  //   box-shadow:
-  //   0px 0px 1px rgba(0,0,0,1),
-  //   0px 0px 2px rgba(0,0,0,1),
-  //   0px 0px 3px rgba(0,0,0,1),
-  //   0px 0px 4px rgba(0,0,0,1),
-  //   0px 0px 5px rgba(0,0,0,1),
-  //   0px 0px 1px rgba(255,255,255,1),
-  //   0px 0px 2px rgba(255,255,255,1),
-  //   0px 0px 3px rgba(255,255,255,1);
-  // }
   &::before {
     position: absolute;
     content: "";
@@ -128,10 +79,10 @@
 }
 @keyframes bounce {
   0%, 100% {
-    transform: scale(1); // Tamanho normal
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2); // Aumenta o tamanho em 20%
+    transform: scale(1.2);
   }
 }
 @media (max-width: 600px) {
@@ -139,16 +90,14 @@
   .container{
     height: 200px;
     width: 200px;
-    // border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
   }
   .pokeball {
-    width: 200px; // Reduz o tamanho da Pokébola
+    width: 200px;
     height: 200px;
-    // border: 3px solid black; // Ajusta a borda para manter a proporção
     position: fixed;
     &::before {
       position: absolute;
